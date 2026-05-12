@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rfr-hjm-fmm"
+version = "0.1.0"
+description = "A Python implementation of a post-IBOR pricing framework for compounded overnight RFRs."
+authors = [
+  { name = "Your Name" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "matplotlib"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
