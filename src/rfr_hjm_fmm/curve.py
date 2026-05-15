@@ -5,6 +5,8 @@ import bisect
 import csv
 import math
 
+import icontract
+
 from rfr_hjm_fmm.utils import assert_strictly_increasing
 
 
@@ -79,6 +81,7 @@ class DiscountCurve:
         p = self.discount(t)
         return -math.log(p) / t
 
+    @icontract.ensure(lambda result: result > 0.0, "forward discount must be positive")
     def forward_discount(self, t1: float, t2: float) -> float:
         """
         Forward discount factor P(t1, t2) under a deterministic curve:

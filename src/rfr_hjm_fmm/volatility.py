@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import icontract
 
+@icontract.ensure(lambda result: 0.0 <= result <= 1.0, "gamma must stay in [0, 1]")
 def gamma_linear(t: float, start: float, end: float) -> float:
     """
     Linear volatility decay function.

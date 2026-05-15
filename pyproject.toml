@@ -12,8 +12,10 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+  "icontract>=2,<3",
   "numpy",
   "pandas",
+  "pydantic>=2,<3",
   "scipy",
   "matplotlib"
 ]

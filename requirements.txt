@@ -1,5 +1,7 @@
+icontract>=2,<3
 numpy
 pandas
+pydantic>=2,<3
 scipy
 matplotlib
 pytest
